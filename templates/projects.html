@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container my-5">
+
+    <h1 class="display-4 text-center mb-5">My Projects & Experience</h1>
+
+    <!-- ==================== Personal Projects ==================== -->
+    <section class="mb-5">
+        <h2 class="mb-4 text-primary">Personal Projects</h2>
+        
+        <div class="card shadow-lg border-0 mb-5">
+            <div class="card-body p-5">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h3>Vector Data Analysis with GeoPandas</h3>
+                        <p class="text-muted">Personal Project</p>
+                    </div>
+                </div>
+                <p>
+                    Developing a comprehensive vector data analysis toolkit using GeoPandas. 
+                    Focused on efficient spatial data processing, geometric operations, spatial joins, 
+                    and advanced geospatial analysis workflows.
+                </p>
+                <div class="mt-4">
+                    <strong>Technologies:</strong> Python, GeoPandas, Shapely, Pandas
+                </div>
+            </div>
+            <div class="card-footer bg-white border-0 p-4">
+                <a href="https://github.com/Jzzzgg/VectorDataAnalysisWithGeoPandas" 
+                   target="_blank" 
+                   class="btn btn-outline-primary">View on GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Work Experience ==================== -->
+    <section>
+        <h2 class="mb-4 text-primary">Work Experience</h2>
+
+        <!-- Work Experience 1 -->
+        <div class="card shadow-lg border-0 mb-5">
+            <div class="card-body p-5">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h3>FME Python Transformer for Utility Data</h3>
+                        <p class="text-muted">Tata Consultancy Services | Pacific Gas & Electric Company (PG&E)</p>
+                    </div>
+                </div>
+                <p>
+                    Built custom Python transformers within FME to process complex water and electricity utility datasets 
+                    for Pacific Gas & Electric Company. These transformers perform comprehensive data validation, 
+                    transformation, cleansing, and integration tasks, ensuring high data quality and consistency across 
+                    multiple systems. The entire workflow is fully automated and deployed on FME Flow, enabling scheduled, 
+                    reliable, and hands-free execution. This solution significantly improved data processing efficiency, 
+                    reduced manual effort, and enhanced the overall reliability of utility data integration into GIS 
+                    and business applications.
+                </p>
+                <div class="mt-4">
+                    <strong>Technologies:</strong> FME, Python, FME Flow, ETL Pipelines, Automation
+                </div>
+            </div>
+        </div>
+
+        <!-- Work Experience 2 （重点项目） -->
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-5">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h3>Enterprise ArcGIS Online Data Automation Pipeline</h3>
+                        <p class="text-muted">Tata Consultancy Services | Pacific Gas & Electric Company (PG&E)</p>
+                    </div>
+                </div>
+                
+                <p>
+                    Designed, developed, and maintained a scalable enterprise data pipeline for ArcGIS Online 
+                    at Pacific Gas & Electric Company.
+                </p>
+                <ul class="mt-3">
+                    <li>Designed and deployed automated data refresh pipelines using <strong>AWS Lambda</strong> and <strong>EventBridge</strong></li>
+                    <li>Implemented secure PostgreSQL connections using <strong>AWS Secrets Manager</strong></li>
+                    <li>Automated quarterly data synchronization between PostgreSQL and ArcGIS Online</li>
+                    <li>Developed custom <strong>ArcPy</strong> geoprocessing tools for spatial data transformation and reporting</li>
+                    <li>Created custom field forms and interactive pop-ups in <strong>ArcGIS Field Maps</strong> for field workers</li>
+                    <li>Significantly reduced manual intervention and improved overall data accuracy and reliability</li>
+                </ul>
+                
+                <div class="mt-4">
+                    <strong>Technologies:</strong> 
+                    AWS Lambda, EventBridge, ArcGIS Online, ArcPy, PostgreSQL, FME, Agile
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}
