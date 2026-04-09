@@ -95,6 +95,9 @@ footer {
     height: 400px;
     width: 1024px;
  } 
+
+
+ 
 @media screen and (max-width: 780px) {
   #map {
     width: 320px;

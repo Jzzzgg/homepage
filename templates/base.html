@@ -14,6 +14,14 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
+     <script type="module">
+        import { animate } from "https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"
+        import { BackgroundPaths } from "@/components/ui/background-paths"
+
+        export function DemoBackgroundPaths() {
+            return <BackgroundPaths title="Background Paths" />
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -33,28 +41,34 @@
                         <a class="nav-link" href="/projects">Projects</a>
                     </li>
                 </ul>
-            </div>
-            <div class="navbar-nav">
-                <div class="d-flex align-items-center gap-3">
-
-                    <!-- 邮箱 -->
-                    <a class="nav-link" href="mailto:j913673235@gmail.com" title="Email Me">
-                        <i class="fas fa-envelope fa-lg"></i>
-                    </a>
-
-                    <!-- 下载简历 -->
-                    <a href="/static/resume.pdf" class="nav-link" title="Download Resume" target="_blank">
-                        <i class="fas fa-download fa-lg"></i>
-                    </a>
-                    <!-- 社交图标 -->
-                    <a href="https://github.com/Jzzzgg" target="_blank" title="GitHub" class="nav-link">
-                        <i class="fab fa-github fa-lg"></i>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/zhu-jiang-625917158/" target="_blank" title="LinkedIn" class="nav-link">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-
+                 <div class="navbar-nav ">
+                    <div class="d-flex align-items-center gap-3">
+                        <ul class="navbar-nav">
+                        <!-- 邮箱 -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="mailto:j913673235@gmail.com" title="Email Me！">
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                </a>
+                            </li>
+                        <!-- 下载简历 -->
+                            <li class="nav-item">
+                                <a href="/static/resume.pdf" class="nav-link" title="Download Resume" target="_blank">
+                                    <i class="fas fa-download fa-lg"></i>
+                                </a>
+                            </li>
+                        <!-- 社交图标 -->
+                            <li class="nav-item">
+                                <a href="https://github.com/Jzzzgg" target="_blank" title="GitHub" class="nav-link">
+                                    <i class="fab fa-github fa-lg"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.linkedin.com/in/zhu-jiang-625917158/" target="_blank" title="LinkedIn" class="nav-link">
+                                    <i class="fab fa-linkedin fa-lg"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
