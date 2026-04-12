@@ -11,6 +11,36 @@
       <div style="height: 880px; overflow-y: auto; padding-right: 6px;">
 
         <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
+        <h3 class="h6 fw-bold text-primary mb-1">Self-Driving Car Simulation via Neuroevolution</h3>
+        <p class="text-muted small mb-3">AI & Machine Learning • Neuroevolution</p>
+        
+        <p class="text-secondary" style="font-size: 15px;">
+            Built a 2D autonomous driving simulation where cars learn to navigate procedurally generated tracks using Neuroevolution. 
+            Instead of traditional programming, neural networks evolve through a Genetic Algorithm, developing sophisticated driving behaviors 
+            such as smooth cornering and obstacle avoidance without any human-coded rules.
+        </p>
+        
+        <ul class="text-secondary" style="font-size: 15px;">
+            <li><strong>Neural Networks & Genetic Algorithm:</strong> Designed feedforward neural networks from scratch and implemented evolutionary training with fitness evaluation, selection, and mutation.</li>
+            <li><strong>Sensor Simulation:</strong> Created a custom LiDAR-like sensor system using line intersection mathematics for real-time track boundary detection.</li>
+            <li><strong>Physics & Optimization:</strong> Implemented 2D vehicle kinematics, vector calculations, and performance optimization to support 100+ concurrent AI agents.</li>
+            <li><strong>Model Persistence:</strong> Enabled saving and loading of the best-performing "brain" using pickle for continuous learning across sessions.</li>
+        </ul>
+        
+        <p class="text-muted small mb-3">
+            Python, Pygame, Neural Networks, Genetic Algorithms, OOP, Physics Simulation
+        </p>
+        
+        <div>
+            <a href="https://github.com/Jzzzgg/selfDrivingCar" 
+              target="_blank" 
+              class="btn btn-outline-primary btn-sm">
+                View on GitHub →
+            </a>
+        </div>
+    </div>
+
+        <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
           <h3 class="h6 fw-bold text-primary mb-1">GeoHouse — AI-Driven Property Insights</h3>
           <p class="text-muted small mb-3">Cloud-Native Geospatial Engineering</p>
           <p class="text-secondary" style="font-size: 15px;">Built an automated due diligence platform that empowers users to evaluate property addresses instantly. The service aggregates multi-dimensional data and leverages AI to provide qualitative assessments on safety, market value, and neighborhood demographics.</p>
@@ -104,6 +134,34 @@
     </div>
 
   </div>
+</div>
+
+<hr class="my-5"> <div class="row">
+  <div class="col-12">
+    <h2 class="h5 fw-bold mb-4">Project Demonstrations & Examples</h2>
+  </div>
+  
+  <div class="col-md-6 mb-4">
+    <div class="card h-100 p-3" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px;">
+      <h3 class="h6 fw-bold text-primary mb-3">Self-Driving Simulation in Action</h3>
+      <video controls class="w-100" style="border-radius: 8px;">
+        <source src="https://github.com/user-attachments/assets/1037769e-1f2a-4b7e-b635-9e0a3ae91b84" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="text-secondary small mt-2">Real-time neuroevolution training process showing agents learning to navigate.</p>
+    </div>
+  </div>
+
+  <!-- <div class="col-md-6 mb-4">
+    <div class="card h-100 p-3" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px;">
+      <h3 class="h6 fw-bold text-primary mb-3">GeoHouse Dashboard UI</h3>
+      <img src="{{ url_for('static', filename='images/geohouse-preview.png') }}" 
+           alt="GeoHouse Preview" 
+           class="img-fluid" 
+           style="border-radius: 8px; object-fit: cover;">
+      <p class="text-secondary small mt-2">Interface showing property risk assessment and geospatial data visualization.</p>
+    </div>
+  </div> -->
 </div>
 
 {% endblock %}
