@@ -1,167 +1,162 @@
-{% extends "base.html" %}
-{% block content %}
-
-<div class="container-fluid my-5 px-4">
-
-  <div class="row g-4">
-
-    <!-- ===== Left: Personal Projects ===== -->
-    <div class="col-md-6">
-      <h2 class="h5 fw-bold mb-3">Personal Projects</h2>
-      <div style="height: 880px; overflow-y: auto; padding-right: 6px;">
-
-        <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
-        <h3 class="h6 fw-bold text-primary mb-1">Self-Driving Car Simulation via Neuroevolution</h3>
-        <p class="text-muted small mb-3">AI & Machine Learning • Neuroevolution</p>
-        
-        <p class="text-secondary" style="font-size: 15px;">
-            Built a 2D autonomous driving simulation where cars learn to navigate procedurally generated tracks using Neuroevolution. 
-            Instead of traditional programming, neural networks evolve through a Genetic Algorithm, developing sophisticated driving behaviors 
-            such as smooth cornering and obstacle avoidance without any human-coded rules.
-        </p>
-        
-        <ul class="text-secondary" style="font-size: 15px;">
-            <li><strong>Neural Networks & Genetic Algorithm:</strong> Designed feedforward neural networks from scratch and implemented evolutionary training with fitness evaluation, selection, and mutation.</li>
-            <li><strong>Sensor Simulation:</strong> Created a custom LiDAR-like sensor system using line intersection mathematics for real-time track boundary detection.</li>
-            <li><strong>Physics & Optimization:</strong> Implemented 2D vehicle kinematics, vector calculations, and performance optimization to support 100+ concurrent AI agents.</li>
-            <li><strong>Model Persistence:</strong> Enabled saving and loading of the best-performing "brain" using pickle for continuous learning across sessions.</li>
-        </ul>
-        
-        <p class="text-muted small mb-3">
-            Python, Pygame, Neural Networks, Genetic Algorithms, OOP, Physics Simulation
-        </p>
-        
-        <div>
-            <a href="https://github.com/Jzzzgg/selfDrivingCar" 
-              target="_blank" 
-              class="btn btn-outline-primary btn-sm">
-                View on GitHub →
-            </a>
-        </div>
-    </div>
-
-        <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
-          <h3 class="h6 fw-bold text-primary mb-1">GeoHouse — AI-Driven Property Insights</h3>
-          <p class="text-muted small mb-3">Cloud-Native Geospatial Engineering</p>
-          <p class="text-secondary" style="font-size: 15px;">Built an automated due diligence platform that empowers users to evaluate property addresses instantly. The service aggregates multi-dimensional data and leverages AI to provide qualitative assessments on safety, market value, and neighborhood demographics.</p>
-          <ul class="text-secondary" style="font-size: 15px;">
-            <li><strong>Data Integration:</strong> Engineered a pipeline to fetch and normalize real-time data from property, crime, and census APIs.</li>
-            <li><strong>AI Analysis:</strong> Implemented an LLM-powered evaluation engine to transform raw data into actionable investment and residency insights.</li>
-            <li><strong>Scalable Infrastructure:</strong> Developed with <strong>FastAPI</strong> and <strong>Docker</strong>; deployed on <strong>Google Cloud Run</strong> using a CI/CD workflow for seamless scalability.</li>
-          </ul>
-          <p class="text-muted small mb-3">Python (FastAPI) • Docker • Google Cloud Run • Gemini/LLM • RESTful APIs</p>
-          <div>
-            <a href="https://github.com/Jzzzgg/geohouse" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub →</a>
-          </div>
-        </div>
-
-        <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
-          <h3 class="h6 fw-bold text-primary mb-1">Professional Portfolio</h3>
-          <p class="text-muted small mb-3">Full-Stack Personal Project</p>
-          <p class="text-secondary" style="font-size: 15px;">Developed a high-performance personal portfolio to showcase engineering projects. This project highlights the integration of modern web technologies with AI-driven development workflows and professional cloud hosting.</p>
-          <ul class="text-secondary" style="font-size: 15px;">
-            <li><strong>AI-Enhanced Workflow:</strong> Utilized Generative AI for rapid UI/UX prototyping and code optimization, ensuring a clean, responsive user experience.</li>
-            <li><strong>Backend Architecture:</strong> Implemented a <strong>Flask</strong> server to manage site structure, routing, and dynamic assets efficiently.</li>
-            <li><strong>Live Deployment:</strong> Successfully managed production hosting, domain DNS records via <strong>Namecheap</strong>, and a Git-based workflow for continuous updates.</li>
-          </ul>
-          <p class="text-muted small mb-3">Flask • Python • Bootstrap • Git • GenAI</p>
-          <div>
-            <a href="https://github.com/Jzzzgg/homepage" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub →</a>
-          </div>
-        </div>
-
-        <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
-          <h3 class="h6 fw-bold text-primary mb-1">PA Municipality Vector Data Analysis</h3>
-          <p class="text-muted small mb-3">Geospatial Data Exploration Project</p>
-          <p class="text-secondary" style="font-size: 15px;">Developed a systematic geospatial analysis workflow to process and visualize Pennsylvania's municipal boundary data. This project serves as a practical implementation of vector data engineering, focusing on the accurate transformation of raw spatial geometries into meaningful geographic insights.</p>
-          <ul class="text-secondary" style="font-size: 15px;">
-            <li><strong>Geometric Attribute Calculation:</strong> Implemented precise CRS transformations to compute municipal areas in square kilometers, ensuring mathematical accuracy between geographic and projected systems.</li>
-            <li><strong>Spatial Distribution Mapping:</strong> Created multi-layered visualizations, including static choropleth maps and interactive <strong>Folium</strong> web maps, to represent the administrative distribution and spatial density of regional boundaries.</li>
-            <li><strong>Exploratory Spatial Data Analysis (ESDA):</strong> Utilized <strong>GeoPandas</strong> and <strong>Shapely</strong> to perform deep dives into polygon datasets, extracting key geometric features and handling spatial metadata.</li>
-          </ul>
-          <p class="text-muted small mb-3">Python • GeoPandas • Matplotlib • Folium • Shapely • EPSG Transformations</p>
-          <div>
-            <a href="https://github.com/Jzzzgg/VectorDataAnalysisWithGeoPandas" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ===== Right: Work Experience ===== -->
-    <div class="col-md-6">
-      <h2 class="h5 fw-bold mb-3">Work Experiences</h2>
-      <div style="height: 880px; overflow-y: auto; padding-right: 6px;">
-
-        <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
-          <h3 class="h6 fw-bold text-primary mb-1">FME Python Transformer for Utility Data</h3>
-          <p class="text-muted small mb-3">Tata Consultancy Services | Pacific Gas & Electric Company (PG&E)</p>
-          <p class="text-secondary" style="font-size: 15px;">Built custom Python transformers within FME to process complex water and electricity utility datasets for Pacific Gas & Electric Company. These transformers perform comprehensive data validation, transformation, cleansing, and integration tasks, ensuring high data quality and consistency across multiple systems. The entire workflow is fully automated and deployed on FME Flow, enabling scheduled, reliable, and hands-free execution. This solution significantly improved data processing efficiency, reduced manual effort, and enhanced the overall reliability of utility data integration into GIS and business applications.</p>
-          <p class="text-muted small mb-0">FME • Python • FME Flow • ETL Pipelines • Automation</p>
-        </div>
-
-        <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
-          <h3 class="h6 fw-bold text-primary mb-1">Enterprise ArcGIS Online Data Automation Pipeline</h3>
-          <p class="text-muted small mb-3">Tata Consultancy Services | Pacific Gas & Electric Company (PG&E)</p>
-          <p class="text-secondary" style="font-size: 15px;">Designed, developed, and maintained a scalable enterprise data pipeline for ArcGIS Online at Pacific Gas & Electric Company.</p>
-          <ul class="text-secondary" style="font-size: 15px;">
-            <li>Designed and deployed automated data refresh pipelines using <strong>AWS Lambda</strong> and <strong>EventBridge</strong></li>
-            <li>Implemented secure PostgreSQL connections using <strong>AWS Secrets Manager</strong></li>
-            <li>Automated quarterly data synchronization between PostgreSQL and ArcGIS Online</li>
-            <li>Developed custom <strong>ArcPy</strong> geoprocessing tools for spatial data transformation and reporting</li>
-            <li>Created custom field forms and interactive pop-ups in <strong>ArcGIS Field Maps</strong> for field workers</li>
-            <li>Significantly reduced manual intervention and improved overall data accuracy and reliability</li>
-          </ul>
-          <p class="text-muted small mb-0">AWS Lambda • EventBridge • ArcGIS Online • ArcPy • PostgreSQL • FME • Agile</p>
-        </div>
-
-        <div class="card mb-4 p-4" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff;">
-          <h3 class="h6 fw-bold text-primary mb-1">MEAN Stack Enterprise Training Modules</h3>
-          <p class="text-muted small mb-3">Full-Stack Development Project</p>
-          <p class="text-secondary" style="font-size: 15px;">Developed a comprehensive suite of full-stack applications utilizing the MEAN (MongoDB, Express.js, Angular, Node.js) ecosystem. This project demonstrates proficiency in building scalable web solutions, real-time communication systems, and automated deployment pipelines.</p>
-          <ul class="text-secondary" style="font-size: 15px;">
-            <li><strong>Full-Stack Integration:</strong> Engineered multiple modules including a Budget Planner, Cart Management system, and Blogging platform using <strong>Angular</strong> for dynamic front-ends and <strong>Node.js/Express</strong> for robust back-end logic.</li>
-            <li><strong>Real-Time & Data Management:</strong> Implemented real-time messaging using <strong>Socket.io</strong> and established secure database connections with <strong>MongoDB</strong> for persistent log recording and task analysis.</li>
-            <li><strong>DevOps & Containerization:</strong> Streamlined the development lifecycle by integrating <strong>Jenkins</strong> and <strong>Docker</strong>, ensuring consistent environment configuration and automated CI/CD workflows.</li>
-          </ul>
-          <p class="text-muted small mb-3">Angular • Node.js • MongoDB • Express • TypeScript • Socket.io • Docker • Jenkins</p>
-          <div>
-            <a href="https://github.com/Jzzzgg/Jzzzgg-1973472_ZhuJiang_TCSMEANStackTraining" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<hr class="my-5"> <div class="row">
-  <div class="col-12">
-    <h2 class="h5 fw-bold mb-4">Project Demonstrations & Examples</h2>
-  </div>
-  
-  <div class="col-md-6 mb-4">
-    <div class="card h-100 p-3" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px;">
-      <h3 class="h6 fw-bold text-primary mb-3">Self-Driving Simulation in Action</h3>
-      <video controls class="w-100" style="border-radius: 8px;">
-        <source src="https://github.com/user-attachments/assets/1037769e-1f2a-4b7e-b635-9e0a3ae91b84" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p class="text-secondary small mt-2">Real-time neuroevolution training process showing agents learning to navigate.</p>
-    </div>
-  </div>
-
-  <!-- <div class="col-md-6 mb-4">
-    <div class="card h-100 p-3" style="box-shadow: 0 2px 8px rgba(0,0,0,0.8); border: 1px solid #dee2e6; border-radius: 12px;">
-      <h3 class="h6 fw-bold text-primary mb-3">GeoHouse Dashboard UI</h3>
-      <img src="{{ url_for('static', filename='images/geohouse-preview.png') }}" 
-           alt="GeoHouse Preview" 
-           class="img-fluid" 
-           style="border-radius: 8px; object-fit: cover;">
-      <p class="text-secondary small mt-2">Interface showing property risk assessment and geospatial data visualization.</p>
-    </div>
-  </div> -->
-</div>
-
-{% endblock %}
+{% extends "base.html" %}
+{% block body_class %}page-projects{% endblock %}
+{% block content %}
+
+<div class="blog-page">
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="mc-eyebrow reveal">Portfolio</p>
+            <h1 class="page-hero__title reveal">Projects</h1>
+            <p class="page-hero__lead reveal">Enterprise GIS pipelines, cloud automation, and personal geospatial builds.</p>
+        </div>
+    </section>
+
+    <section class="page-band page-band--surface">
+        <div class="container">
+            <article class="blog-featured blog-featured--hero reveal" id="featured">
+                <span class="blog-badge">Featured</span>
+                <h2 class="blog-featured-title">Self-Driving Car Simulation via Neuroevolution</h2>
+                <p class="blog-category">AI &amp; Machine Learning · Neuroevolution</p>
+                <p class="blog-excerpt">Built a 2D autonomous driving simulation where cars learn to navigate procedurally generated tracks using Neuroevolution. Instead of traditional programming, neural networks evolve through a Genetic Algorithm, developing sophisticated driving behaviors such as smooth cornering and obstacle avoidance without any human-coded rules.</p>
+                <div class="blog-featured-video">
+                    <video controls preload="metadata">
+                        <source src="https://github.com/user-attachments/assets/1037769e-1f2a-4b7e-b635-9e0a3ae91b84" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="blog-video-caption">Real-time neuroevolution training process showing agents learning to navigate.</p>
+                <a href="https://github.com/Jzzzgg/selfDrivingCar" target="_blank" class="mc-link">View on GitHub →</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="page-band page-band--tint">
+        <div class="container">
+            <div class="page-section-head reveal">
+                <h2 class="blog-section-heading">Top picks</h2>
+                <p>Highlighted enterprise and personal work.</p>
+            </div>
+            <div class="row reveal">
+                <div class="col-md-6 mb-4">
+                    <article class="blog-card blog-card--pick blog-card--dark">
+                        <span class="blog-card-type">Project</span>
+                        <h3>GeoHouse — AI-Driven Property Insights</h3>
+                        <p class="blog-category">Cloud-Native Geospatial Engineering</p>
+                        <p>Built an automated due diligence platform that empowers users to evaluate property addresses instantly. The service aggregates multi-dimensional data and leverages AI to provide qualitative assessments on safety, market value, and neighborhood demographics.</p>
+                        <a href="https://github.com/Jzzzgg/geohouse" target="_blank" class="mc-link mc-link--light">Read More →</a>
+                    </article>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <article class="blog-card blog-card--pick blog-card--light">
+                        <span class="blog-card-type">Work</span>
+                        <h3>Enterprise ArcGIS Online Data Automation Pipeline</h3>
+                        <p class="blog-category">Enterprise GIS · PG&amp;E</p>
+                        <p>Designed and maintained a scalable enterprise data pipeline for ArcGIS Online over 4 years. Implemented automated refresh using AWS Lambda, EventBridge, and secure PostgreSQL connections.</p>
+                        <a href="/projects#work" class="mc-link">Read More →</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-band page-band--surface">
+        <div class="container">
+            <div class="page-section-head reveal">
+                <h2 class="blog-section-heading">Recent projects</h2>
+                <p>Personal builds and full-stack experiments.</p>
+            </div>
+
+            <div class="blog-card-list reveal">
+                <article class="blog-card blog-card--row">
+                    <div class="blog-card-body">
+                        <span class="blog-card-type">Project</span>
+                        <h3>Professional Portfolio</h3>
+                        <p class="blog-category">Full-Stack Personal Project</p>
+                        <p>Developed a high-performance personal portfolio to showcase engineering projects. This project highlights the integration of modern web technologies with AI-driven development workflows and professional cloud hosting.</p>
+                        <a href="https://github.com/Jzzzgg/homepage" target="_blank" class="mc-link">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card blog-card--row">
+                    <div class="blog-card-body">
+                        <span class="blog-card-type">Project</span>
+                        <h3>PA Municipality Vector Data Analysis</h3>
+                        <p class="blog-category">Geospatial Data Exploration</p>
+                        <p>Developed a systematic geospatial analysis workflow to process and visualize Pennsylvania's municipal boundary data. Vector data engineering with CRS transformations, choropleth maps, and interactive Folium web maps.</p>
+                        <a href="https://github.com/Jzzzgg/VectorDataAnalysisWithGeoPandas" target="_blank" class="mc-link">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card blog-card--row">
+                    <div class="blog-card-body">
+                        <span class="blog-card-type">Project</span>
+                        <h3>MEAN Stack Enterprise Training Modules</h3>
+                        <p class="blog-category">Full-Stack Development</p>
+                        <p>Developed a comprehensive suite of full-stack applications utilizing the MEAN ecosystem — Budget Planner, Cart Management, Blogging platform, real-time messaging with Socket.io, and CI/CD with Jenkins and Docker.</p>
+                        <a href="https://github.com/Jzzzgg/Jzzzgg-1973472_ZhuJiang_TCSMEANStackTraining" target="_blank" class="mc-link">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-band page-band--dark" id="work">
+        <div class="container">
+            <div class="page-section-head page-section-head--light reveal">
+                <h2 class="blog-section-heading">Work experience</h2>
+                <p>Enterprise GIS and ETL delivery at Tata Consultancy Services · PG&amp;E.</p>
+            </div>
+
+            <div class="blog-card-list reveal">
+                <article class="blog-card blog-card--row blog-card--dark">
+                    <div class="blog-card-body">
+                        <span class="blog-card-type">Work</span>
+                        <h3>FME Python Transformer for Utility Data</h3>
+                        <p class="blog-category">Tata Consultancy Services · PG&amp;E</p>
+                        <p>Built custom Python transformers within FME to process complex water and electricity utility datasets. Fully automated workflow deployed on FME Flow — significantly improved data processing efficiency and reliability.</p>
+                        <span class="blog-tags">FME · Python · FME Flow · ETL Pipelines</span>
+                    </div>
+                </article>
+
+                <article class="blog-card blog-card--row blog-card--dark">
+                    <div class="blog-card-body">
+                        <span class="blog-card-type">Work</span>
+                        <h3>Enterprise ArcGIS Online Data Automation Pipeline</h3>
+                        <p class="blog-category">Tata Consultancy Services · PG&amp;E</p>
+                        <p>Designed, developed, and maintained a scalable enterprise data pipeline for ArcGIS Online. AWS Lambda, EventBridge, ArcPy geoprocessing tools, ArcGIS Field Maps forms, and quarterly PostgreSQL synchronization.</p>
+                        <span class="blog-tags">AWS Lambda · EventBridge · ArcPy · PostgreSQL · FME</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-band page-band--tint">
+        <div class="container">
+            <div class="page-section-head reveal">
+                <h2 class="blog-section-heading">Tech stack</h2>
+                <p>Tools and platforms across projects and production work.</p>
+            </div>
+            <ul class="blog-archive-list reveal">
+                <li><span class="skill-tag">Python · ArcPy · FME · AWS · ESRI ArcGIS</span></li>
+                <li><span class="skill-tag">FastAPI · Docker · Google Cloud Run · Gemini/LLM</span></li>
+                <li><span class="skill-tag">GeoPandas · Folium · Shapely · PostgreSQL</span></li>
+                <li><span class="skill-tag">Angular · Node.js · MongoDB · Express · Socket.io</span></li>
+                <li><span class="skill-tag">Pygame · Neural Networks · Genetic Algorithms</span></li>
+                <li><span class="skill-tag">Flask · Bootstrap · Git · GenAI</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-cta">
+        <div class="container text-center reveal">
+            <p class="page-cta-text">Want to see more or discuss a project?</p>
+            <a href="mailto:j913673235@gmail.com" class="btn btn-mc-primary">Contact Me →</a>
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}
+

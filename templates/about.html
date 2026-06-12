@@ -1,118 +1,221 @@
 {% extends "base.html" %}
+{% block body_class %}page-about{% endblock %}
 {% block content %}
 
-<div class="container my-5">
+<div class="about-page">
 
-    <div class="row justify-content-center">
-        
-
-            <h1 class="display-4 mb-4 text-center">About Me</h1>
-
-           <!-- Professional Summary -->
-            <div class="mb-3">
-                <h4 class="mb-3">Professional Summary</h4>
-                <p>I am a dedicated GIS Developer with over 5 years of professional experience specializing in geospatial solutions.</p>
-                <p>My expertise centers on <strong>Python, FME, AWS, and ESRI ArcGIS</strong> platforms. I focus on designing and implementing automation pipelines, developing scalable cloud solutions, and building efficient spatial data applications that help organizations manage, process, and analyze location-based data more effectively.</p>
-                <p>I am passionate about using geospatial technology as a bridge to connect real-world data with intelligent systems. I enjoy creating automated workflows, optimizing data pipelines, solving complex problems, and delivering practical solutions that improve accuracy and operational efficiency.</p>
-            </div>
-            <div class="text-center my-3">
-                <a href="/projects" class="btn btn-primary btn-lg px-5">View My Projects →</a>
-            </div>
-
-    </div>
-
-<!-- Education Section -->
-    <div class="mb-3">
-        <h4 class="mb-3">Education</h4>
-
-        <div class="card mb-3 p-4" style="border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
-                    <h6 class="fw-bold text-primary mb-1">Rochester Institute of Technology</h6>
-                    <p class="mb-1">Bachelor of Science, Computing and Information Technologies</p>
-                    <p class="text-muted small mb-0">Rochester, NY</p>
+    <section class="page-hero">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-lg-7">
+                    <p class="mc-eyebrow reveal">About</p>
+                    <h1 class="page-hero__title reveal">About Me</h1>
+                    <div class="about-prose reveal">
+                        <p>I am a dedicated GIS Developer with over 5 years of professional experience specializing in geospatial solutions.</p>
+                        <p>My expertise centers on <strong>Python, FME, AWS, and ESRI ArcGIS</strong> platforms. I focus on designing and implementing automation pipelines, developing scalable cloud solutions, and building efficient spatial data applications that help organizations manage, process, and analyze location-based data more effectively.</p>
+                        <p>I am passionate about using geospatial technology as a bridge to connect real-world data with intelligent systems. I enjoy creating automated workflows, optimizing data pipelines, solving complex problems, and delivering practical solutions that improve accuracy and operational efficiency.</p>
+                    </div>
                 </div>
-                <div class="text-end">
-                    <span class="text-muted small">Graduated Dec 2020</span><br>
-                    <span class="badge bg-primary-subtle text-primary mt-1">GPA 3.54</span>
+                <div class="col-lg-5 mt-4 mt-lg-0">
+                    <aside class="about-aside reveal">
+                        <div class="about-aside-card">
+                            <span class="about-aside-label">Core Focus</span>
+                            <ul class="about-aside-list">
+                                <li>FME ETL &amp; FME Flow</li>
+                                <li>Cloud Solutions (AWS)</li>
+                                <li>Python &amp; ArcPy Automation</li>
+                                <li>ArcGIS Online / Enterprise / Pro</li>
+                            </ul>
+                            <a href="/projects" class="btn btn-mc-primary btn-block mt-3">View My Projects →</a>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="card mb-3 p-4" style="border: 1px solid #dee2e6; border-radius: 12px; background-color: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
-                    <h6 class="fw-bold text-primary mb-1">State University of New York at Fredonia</h6>
-                    <p class="mb-1">Bachelor's Degree, Computer Science</p>
-                    <p class="text-muted small mb-0">Fredonia, NY</p>
+    <section class="page-band page-band--tint">
+        <div class="container">
+            <div class="page-section-head reveal">
+                <h2 class="about-h2">Expertise</h2>
+                <p>Primary areas of work across enterprise GIS and automation.</p>
+            </div>
+            <div class="row about-focus reveal">
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="about-pillar about-pillar--accent">
+                        <span class="about-pillar-num">01</span>
+                        <h4>FME ETL</h4>
+                        <p>Custom Python transformers, data validation, and FME Flow automation for utility and enterprise datasets.</p>
+                    </div>
                 </div>
-                <div class="text-end">
-                    <span class="text-muted small">2015 – 2016</span>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="about-pillar about-pillar--accent">
+                        <span class="about-pillar-num">02</span>
+                        <h4>Cloud Solutions</h4>
+                        <p>AWS Lambda, EventBridge, and cloud-hosted pipelines for scheduled, reliable geospatial data processing.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="about-pillar about-pillar--accent">
+                        <span class="about-pillar-num">03</span>
+                        <h4>Python Automation</h4>
+                        <p>ArcPy scripts, API integrations, and automated workflows that reduce manual GIS operations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="about-pillar about-pillar--accent">
+                        <span class="about-pillar-num">04</span>
+                        <h4>ESRI Products</h4>
+                        <p>ArcGIS Online, ArcGIS Enterprise, and ArcGIS Pro — publishing, syncing, and maintaining spatial data at scale.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-<!-- Key Skills Section -->
-<div class="mb-3">
-    <h4 class="mb-4">Key Skills</h4>
-    
-    <div class="row g-4">
-
-        <!-- GIS / Spatial（重点突出） -->
-        <div class="col-md-6">
-            <h6 class="text-primary mb-3">GIS & Spatial Technologies</h6>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-info text-info px-3 py-2">ArcGIS Online</span>
-                <span class="badge border border-info text-info px-3 py-2">ArcGIS Pro</span>
-                <span class="badge border border-info text-info px-3 py-2">ArcPy</span>
-                <span class="badge border border-info text-info px-3 py-2">FME</span>
-                <span class="badge border border-info text-info px-3 py-2">GeoPandas</span>
+    <section class="page-band page-band--surface">
+        <div class="container">
+            <div class="page-section-head reveal">
+                <h2 class="about-h2">How I Work</h2>
+                <p>From requirements through deployment and ongoing support.</p>
+            </div>
+            <div class="row about-steps reveal">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="about-step">
+                        <span class="about-step-num">01</span>
+                        <h4>Assess Data &amp; Requirements</h4>
+                        <p>Review sources, formats, CRS, and business rules before building pipelines.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="about-step">
+                        <span class="about-step-num">02</span>
+                        <h4>Build ETL &amp; Automation</h4>
+                        <p>Develop FME workflows, Python scripts, and ArcPy tools with validation built in.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="about-step">
+                        <span class="about-step-num">03</span>
+                        <h4>Deploy to Cloud</h4>
+                        <p>Schedule jobs with AWS Lambda, EventBridge, and secure database connections.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="about-step">
+                        <span class="about-step-num">04</span>
+                        <h4>Maintain &amp; Support</h4>
+                        <p>Monitor pipelines, fix data issues, and keep ArcGIS Online content up to date.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Programming -->
-        <div class="col-md-6">
-            <h6 class="text-primary mb-3">Programming & Backend</h6>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-success text-success px-3 py-2">Python</span>
-                <span class="badge border border-success text-success px-3 py-2">Java</span>
-                <span class="badge border border-success text-success px-3 py-2">Node.js</span>
-                <span class="badge border border-success text-success px-3 py-2">Express.js</span>
+    <section class="page-band page-band--tint">
+        <div class="container">
+            <div class="page-section-head reveal">
+                <h2 class="about-h2">Education</h2>
+                <p>Academic background in computing and computer science.</p>
+            </div>
+
+            <div class="about-edu-card reveal">
+                <div class="d-flex justify-content-between align-items-start flex-wrap">
+                    <div>
+                        <h4>Rochester Institute of Technology</h4>
+                        <p class="text-muted mb-1">Bachelor of Science, Computing and Information Technologies</p>
+                        <p class="text-muted small mb-0">Rochester, NY</p>
+                    </div>
+                    <div class="text-md-end mt-2 mt-md-0">
+                        <span class="text-muted small">Graduated Dec 2020</span><br>
+                        <span class="skill-tag mt-1 d-inline-block">GPA 3.54</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-edu-card reveal">
+                <div class="d-flex justify-content-between align-items-start flex-wrap">
+                    <div>
+                        <h4>State University of New York at Fredonia</h4>
+                        <p class="text-muted mb-1">Bachelor's Degree, Computer Science</p>
+                        <p class="text-muted small mb-0">Fredonia, NY</p>
+                    </div>
+                    <div class="text-md-end mt-2 mt-md-0">
+                        <span class="text-muted small">2015 – 2016</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Cloud / DevOps -->
-        <div class="col-md-6">
-            <h6 class="text-primary mb-3">Cloud & DevOps</h6>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-warning text-warning px-3 py-2">AWS</span>
-                <span class="badge border border-warning text-warning px-3 py-2">Git</span>
-                <span class="badge border border-warning text-warning px-3 py-2">Automation Pipelines</span>
-                <span class="badge border border-warning text-warning px-3 py-2">EventBridge</span>
-                <span class="badge border border-warning text-warning px-3 py-2">Agile</span>
+    <section class="page-band page-band--dark">
+        <div class="container">
+            <div class="page-section-head page-section-head--light reveal">
+                <h2 class="about-h2">Key Skills</h2>
+                <p>Technologies used across GIS, backend, cloud, and data workflows.</p>
+            </div>
+
+            <div class="row reveal">
+                <div class="col-md-6 mb-4 skills-group">
+                    <h6>GIS &amp; Spatial Technologies</h6>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ArcGIS Online</span>
+                        <span class="skill-tag">ArcGIS Enterprise</span>
+                        <span class="skill-tag">ArcGIS Pro</span>
+                        <span class="skill-tag">ArcPy</span>
+                        <span class="skill-tag">FME</span>
+                        <span class="skill-tag">GeoPandas</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 skills-group">
+                    <h6>Programming &amp; Backend</h6>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 skills-group">
+                    <h6>Cloud &amp; DevOps</h6>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Automation Pipelines</span>
+                        <span class="skill-tag">EventBridge</span>
+                        <span class="skill-tag">Agile</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 skills-group">
+                    <h6>Databases &amp; Others</h6>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Linux/Unix</span>
+                        <span class="skill-tag">Data Structures &amp; Algorithms</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Databases & Others -->
-        <div class="col-md-6">
-            <h6 class="text-primary mb-3">Databases & Others</h6>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-secondary text-secondary px-3 py-2">SQL</span>
-                <span class="badge border border-secondary text-secondary px-3 py-2">PostgreSQL</span>
-                <span class="badge border border-secondary text-secondary px-3 py-2">Linux/Unix</span>
-                <span class="badge border border-secondary text-secondary px-3 py-2">Data Structures & Algorithms</span>
+    <section class="page-band page-band--surface">
+        <div class="container">
+            <div class="page-section-head reveal">
+                <h2 class="about-h2">Current Location</h2>
+            </div>
+            <div class="map-section reveal">
+                <div id="map"></div>
             </div>
         </div>
+    </section>
 
-    </div>
-</div>
-
-    <!-- Leaflet Map 区 -->
-    <div class="container my-5 py-4 bg-light rounded-3">
-        <h4 class="mb-3 text-center">Current Location</h4>
-        <div id="map" style="height: 420px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></div>
-    </div>
+    <section class="page-cta">
+        <div class="container text-center reveal">
+            <p class="page-cta-text">Interested in collaboration or full-time opportunities?</p>
+            <a href="mailto:j913673235@gmail.com" class="btn btn-mc-primary">Contact Me →</a>
+        </div>
+    </section>
 
 </div>
 
