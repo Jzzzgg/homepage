@@ -2,91 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="icon" href="/static/icon.ico" type="image/x-icon"/>
-    <title>Zhu Jiang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zhu Jiang (Jason) — GIS Developer specializing in Python, ArcGIS, FME, AWS, and geospatial automation pipelines.">
+    <link rel="icon" href="/static/icon.ico" type="image/x-icon">
+    <title>Zhu Jiang — GIS Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
     <link href="/static/styles.css" rel="stylesheet">
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-     <script type="module">
-        import { animate } from "https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"
-        import { BackgroundPaths } from "@/components/ui/background-paths"
-
-        export function DemoBackgroundPaths() {
-            return <BackgroundPaths title="Background Paths" />
-        }
-    </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                Zhu Jiang
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">🎯</span>
+<body class="{% block body_class %}{% endblock %}">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
+        <div class="container nav-container">
+            <a class="navbar-brand" href="/">Zhu <span>Jiang</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav-center">
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                </ul>
+                <ul class="navbar-nav nav-social ml-lg-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" href="mailto:j913673235@gmail.com" title="Email Me！">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/projects">Projects</a>
+                        <a class="nav-link" href="/static/resume.pdf" title="Download Resume" target="_blank">
+                            <i class="fas fa-download fa-lg"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Jzzzgg" target="_blank" title="GitHub">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/zhu-jiang-625917158/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
                     </li>
                 </ul>
-                 <div class="navbar-nav ">
-                    <div class="d-flex align-items-center gap-3">
-                        <ul class="navbar-nav">
-                        <!-- 邮箱 -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="mailto:j913673235@gmail.com" title="Email Me！">
-                                    <i class="fas fa-envelope fa-lg"></i>
-                                </a>
-                            </li>
-                        <!-- 下载简历 -->
-                            <li class="nav-item">
-                                <a href="/static/resume.pdf" class="nav-link" title="Download Resume" target="_blank">
-                                    <i class="fas fa-download fa-lg"></i>
-                                </a>
-                            </li>
-                        <!-- 社交图标 -->
-                            <li class="nav-item">
-                                <a href="https://github.com/Jzzzgg" target="_blank" title="GitHub" class="nav-link">
-                                    <i class="fab fa-github fa-lg"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.linkedin.com/in/zhu-jiang-625917158/" target="_blank" title="LinkedIn" class="nav-link">
-                                    <i class="fab fa-linkedin fa-lg"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
-    
-    <div class="content container">
+
+    <main class="page-main">
         {% block content %}{% endblock %}
-    </div>
-    <footer>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>&copy; 2026 Zhu Jiang
-                    </p>
-                </div>
-            </div>
+            <p>&copy; 2026 Zhu Jiang · GIS Developer</p>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
